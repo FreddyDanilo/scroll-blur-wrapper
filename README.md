@@ -5,11 +5,11 @@
 ## Como usar
 
 ```tsx
-import { scrollblurwrapper } from "./scrollblurwrapper";
+import { ScrollBlurWrapper } from "./scroll-blur-wrapper";
 
 export default function exemplo() {
   return (
-    <scrollblurwrapper minvelocity={30} blurdirection="vertical">
+    <ScrollBlurWrapper minvelocity={30} blurdirection="vertical">
       <div className="minha-secção">
         teu conteúdo
       </div>
