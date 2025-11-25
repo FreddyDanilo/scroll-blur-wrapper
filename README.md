@@ -20,9 +20,9 @@ export default function Exemplo() {
 
 | propriedade     | tipo                           | padrão       | descrição                                |
 | --------------- | ------------------------------ | ------------ | ---------------------------------------- |
-| `children`      | react.reactnode                | obrigatório  | elementos a serem envolvidos             |
+| `children`      | reactnode                      | obrigatório  | elementos a serem envolvidos             |
 | `className`     | string                         | opcional     | classes tailwinds (caso uses)            |
-| `style`         | react.cssproperties            | opcional     | estilos inline                           |
+| `style`         | cssproperties                  | opcional     | estilos inline                           |
 | `minVelocity`   | número (0–100)                 | `20`         | velocidade mínima para ativar o desfoque |
 | `blurDirection` | `"vertical"` ou `"horizontal"` | `"vertical"` | orientação do desfoque                   |
 
