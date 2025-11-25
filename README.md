@@ -7,36 +7,31 @@
 ```tsx
 import { ScrollBlurWrapper } from "./scroll-blur-wrapper";
 
-export default function exemplo() {
+export default function Exemplo() {
   return (
-    <ScrollBlurWrapper minVelocity={30} blurDirection="vertical">
-      <div className="minha-secção">
-        teu conteúdo
-      </div>
-    </scrollblurwrapper>
+    <ScrollBlurWrapper>
+      <div>O teu conteúdo</div>
+    </ScrollBlurWrapper>
   );
 }
 ```
 
 ## Props
 
-| propriedade     | tipo                             | padrão       | descrição                                |
-| --------------- | ---------------------------------| ------------ | ---------------------------------------- |
-| `children`      | react.reactnode                  | obrigatório  | elementos a serem envolvidos             |
-| `className`     | string                           | opcional     | classes tailwinds (caso uses)            |
-| `style`         | react.cssproperties              | opcional     | estilos inline                           |
-| `minVelocity`   | número (0–100)                   | `20`         | velocidade mínima para ativar o desfoque |
-| `blurDirection` | `"vertical"` ou `"horizontal"`   | `"vertical"` | orientação do desfoque                   |
+| propriedade     | tipo                           | padrão       | descrição                                |
+| --------------- | ------------------------------ | ------------ | ---------------------------------------- |
+| `children`      | react.reactnode                | obrigatório  | elementos a serem envolvidos             |
+| `className`     | string                         | opcional     | classes tailwinds (caso uses)            |
+| `style`         | react.cssproperties            | opcional     | estilos inline                           |
+| `minVelocity`   | número (0–100)                 | `20`         | velocidade mínima para ativar o desfoque |
+| `blurDirection` | `"vertical"` ou `"horizontal"` | `"vertical"` | orientação do desfoque                   |
 
 ## ❤️ Apoia este projeto
 
-<a href="https://www.paypal.com/donate/?hosted_button_id=RA8KH3JFCKXCS">Clica aqui para apoiar</a>
+<a href="https://www.paypal.com/donate/?hosted_button_id=RA8KH3JFCKXCS" target="_blank">Clica aqui para apoiar</a>
 
 ### ⭐ **Deixa uma estrela no repositório**
 
 Uma simples estrela ajuda bué o projeto a crescer e alcançar mais desenvolvedores.
 
 By: Freddy Danilo
-
-
-
