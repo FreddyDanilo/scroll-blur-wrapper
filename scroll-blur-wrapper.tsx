@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useEffect, useRef } from "react";
+import { CSSProperties, Fragment, ReactNode, useEffect, useId, useRef } from "react";
 
 type Enumerate<
   N extends number,
@@ -12,9 +12,9 @@ type Enumerate<
 type Range<N extends number> = Enumerate<N>;
 
 interface ScrollBlurWrapperProps {
-  children: React.ReactNode;
+  children: ReactNode;
   className?: string;
-  style?: React.CSSProperties;
+  style?: CSSProperties;
   minVelocity?: Range<101>;
   blurDirection?: "vertical" | "horizontal";
 }
@@ -32,7 +32,7 @@ export const ScrollBlurWrapper = ({
   const currentBlur = useRef(0);
   const rafId = useRef<number>(0);
 
-  const filterId = React.useId();
+  const filterId = useId();
   const uniqueFilterId = `motion-blur-${filterId.replace(/:/g, "")}`;
 
   const effectiveMinVelocity = Math.min(Math.max(minVelocity, 0), 100);
@@ -72,7 +72,7 @@ export const ScrollBlurWrapper = ({
   }, [effectiveMinVelocity, blurDirection]);
 
   return (
-    <>
+    <Fragment>
       <svg
         style={{
           pointerEvents: "none",
@@ -104,6 +104,6 @@ export const ScrollBlurWrapper = ({
       >
         {children}
       </div>
-    </>
+    </Fragment>
   );
 };
